@@ -1,0 +1,1025 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <title>Avni Barman</title>
+    <link rel="shortcut icon" href="i2.png"/>
+
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+<!--    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+        <script>window.jQuery || document.write('<script src="jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="jquery.galereya.min.js"></script>
+        <script src="jquery-stars.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/glacial-indifference" type="text/css"/>
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="jquery.galereya.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" href="magnific-popup.css">
+</head>
+
+<script>
+    $(document).ready(function() {
+
+        $("#1").addClass("clicked");
+        console.log($(window).scrollTop());
+        $("#first").hide();
+        $("#second").hide();
+        $("#third").hide();
+        $("#fourth").hide();
+
+        $("#creative").click(function() {
+            $(".container").hide();
+            $("#first").show();
+            $('html, body').animate({
+             scrollTop: ($('#first').offset().top)
+                },500);
+        });
+
+        $("#concentration").click(function() {
+            $(".container").hide();
+            $("#second").show();
+            $('html, body').animate({
+             scrollTop: ($('#second').offset().top)
+                },500);
+        });
+
+        $("#leadership").click(function() {
+            $(".container").hide();
+            $("#third").show();
+            $('html, body').animate({
+             scrollTop: ($('#third').offset().top)
+                },500);
+        });
+
+        $("#projects").click(function() {
+            $(".container").hide();
+            $("#fourth").show();
+            $('html, body').animate({
+             scrollTop: ($('#fourth').offset().top)
+                },500);
+        });
+
+        $(".back").click(function() {
+            $(".container").show();
+            $("#first").hide();
+            $("#second").hide();
+            $("#third").hide();
+            $("#fourth").hide();
+            $('html, body').animate({
+             scrollTop: ($('#portfolio').offset().top)
+                },500);
+        });
+
+        //$(window).scroll(function(){
+        //    if ($(this).scrollTop() >= $('#me').offset().top - 1){
+        //        $("#1").addClass("clicked");
+        //        $("#2").removeClass("clicked");
+        //        $("#3").removeClass("clicked");
+        //        $("#4").removeClass("clicked");
+        //        $("#5").removeClass("clicked");
+        //        $("#6").removeClass("clicked");
+        //        $("#7").removeClass("clicked");
+        //        $("#8").removeClass("clicked");
+        //    }
+        //
+        //    if ($(this).scrollTop() >= $('#about').offset().top - 1){
+        //        $("#1").removeClass("clicked");
+        //        $("#2").addClass("clicked");
+        //        $("#3").removeClass("clicked");
+        //        $("#4").removeClass("clicked");
+        //        $("#5").removeClass("clicked");
+        //        $("#6").removeClass("clicked");
+        //        $("#7").removeClass("clicked");
+        //        $("#8").removeClass("clicked");
+        //    }
+        //
+        //    if ($(this).scrollTop() >= $('#portfolio').offset().top - 1){
+        //        $("#1").removeClass("clicked");
+        //        $("#2").removeClass("clicked");
+        //        $("#3").addClass("clicked");
+        //        $("#4").removeClass("clicked");
+        //        $("#5").removeClass("clicked");
+        //        $("#6").removeClass("clicked");
+        //        $("#7").removeClass("clicked");
+        //        $("#8").removeClass("clicked");
+        //    }
+        //
+        //    if ($(this).scrollTop() >= $('#yellowbar').offset().top - 1){
+        //        $("#1").removeClass("clicked");
+        //        $("#2").removeClass("clicked");
+        //        $("#3").removeClass("clicked");
+        //        $("#4").addClass("clicked");
+        //        $("#5").removeClass("clicked");
+        //        $("#6").removeClass("clicked");
+        //        $("#7").removeClass("clicked");
+        //        $("#8").removeClass("clicked");
+        //    }
+        //
+        //     if ($(this).scrollTop() > $('#p3').offset().top - 1){
+        //        $("#1").removeClass("clicked");
+        //        $("#2").removeClass("clicked");
+        //        $("#3").removeClass("clicked");
+        //        $("#4").removeClass("clicked");
+        //        $("#5").addClass("clicked");
+        //        $("#6").removeClass("clicked");
+        //        $("#7").removeClass("clicked");
+        //        $("#8").removeClass("clicked");
+        //    }
+
+        //});
+
+        $("#1").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#me").offset().top
+            }, 1000);
+        });
+
+        $("#2").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#about").offset().top
+            }, 1000);
+
+        });
+
+        $("#3").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#portfolio").offset().top
+            }, 1000);
+        });
+
+        $("#4").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#yellowbar").offset().top
+            }, 1000);
+        });
+
+        $("#5").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#p3").offset().top
+            }, 1000);
+        });
+
+
+    $("#1").mouseover(function(){
+        $("#a").html("back to top");
+    });
+    $("#1").mouseout(function(){
+        $("#a").html("");
+    });
+
+
+    $('.image-popup-vertical-fit').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		mainClass: 'mfp-img-mobile',
+		image: {
+			verticalFit: true
+	}
+
+	});
+
+	$('.image-popup-fit-width').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		image: {
+			verticalFit: false
+		}
+	});
+
+	$('.image-popup-no-margins').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		closeBtnInside: false,
+		fixedContentPos: true,
+		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+		image: {
+			verticalFit: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300 // don't foget to change the duration also in CSS
+		}
+	});
+
+
+    });
+</script>
+
+<style>
+
+   div {
+      font-family: 'GlacialIndifferenceRegular';
+   font-weight: normal;
+   font-style: normal;
+    }
+
+    #main{
+        width: 100%;
+        background-color: #5E4860;
+    }
+
+    #me{
+        width: 100%;
+        position: absolute;
+        z-index: -2;
+    }
+
+    #m{
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .box{
+        margin-top: 270px;
+        position: absolute;
+        z-index: 10;
+        width: 98%;
+        height: 230px;
+    }
+
+    #name{
+        font-size: 48pt;
+        text-align: right;
+        color: #E4F0C0;
+        padding-top: 160px;
+        padding-right: 100px;
+        font-family: 'HiRegular';
+        border: 1px solid red;
+    }
+
+    #sub{
+        color: #A0C8EE;
+        font-size: 17pt;
+        border: 1px solid red;
+    }
+
+    #about{
+        background-color: #E4F0C0;
+        width: 100%;
+        margin-top: 428px;
+    }
+
+
+     #port{
+        background-color: #1F0B28;
+        margin: auto;
+        wwidth: 20%;
+        width: 300px;
+        height: 170px;
+        hheight: 35%;
+        ffont-family: 'HiRegular';
+        color: #A0C8EE;
+        font-size: 44pt;
+        ppadding-left: 4%;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+
+    hr {
+        border: 1px solid #5E4860;
+    }
+
+    #bio{
+        color: #A0C8EE;
+        background-color: #1F0B28;
+        width: 84%;
+        padding: 3%;
+        line-height: 30px;
+        letter-spacing: 1px;
+        text-align: right;
+    }
+
+    #portfolio{
+        background-color: #5E4860;
+        width: 100%;
+    }
+
+    .container{
+        background-color: #5E4860;
+    }
+
+    .bar{
+        background-color: #5E4860;
+        width: 100%;
+        height: 40px;
+        margin-top: 2%;
+    }
+
+
+    .yellowbar{
+        background-color: #E4F0C0;
+        width: 100%;
+        height: 53px;
+    }
+
+    #yellowbar{
+        background-color: #E4F0C0;
+        width: 100%;
+        height: 53px;
+    }
+
+    #footer{
+        width: 100%;
+        background-color: #1F0B28;
+        text-align: center;
+        color: #E4F0C0;
+    }
+
+    #resume{
+        width: 30%;
+        border: solid #A0C8EE 4px;
+        color: #E4F0C0;
+        background-color: #1F0B28;
+        text-align: center;
+        padding-bottom: 14px;
+    }
+
+    #resume:hover{
+        background-color: #A0C8EE;
+        color: #1F0B28;
+        border: solid #E4F0C0 4px;
+    }
+
+    #line{
+        width: 2px;
+        height: 110px;
+        background-color: #E4F0C0;
+        margin-top: 48px;
+    }
+
+
+    .icons{
+        width: 55%;
+        margin: 5%;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+
+    }
+
+    .icons:hover{
+        opacity: 0.7;
+        -webkit-transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
+        -o-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+    }
+
+    .square{
+        width: 20px;
+        height: 20px;
+        background-color: #A0C8EE;
+        margin-top: 6px;
+        margin-right: 18px;
+        float: left;
+    }
+
+    .square:hover{
+        opacity: 0.5;
+    }
+
+    #square{
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+        width: 10px;
+        height: 120px;
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+
+    .text{
+        width: 90px;
+        height: 9px;
+        margin-top: 6px;
+        margin-right: 18px;
+        float: left;
+        color: white;
+        font-size: 10pt;
+        text-align: right;
+    }
+
+
+    #text{
+        position: fixed;
+        right: 100px;
+        top: 0;
+        z-index: 1000;
+        width: 10px;
+        height: 120px;
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+
+    .clicked{
+        width: 20px;
+        height: 20px;
+        border: solid 2px #A0C8EE;
+        margin-top: 6px;
+        margin-right: 18px;
+        float: left;
+        background-color: transparent;
+    }
+
+    .p{
+        width: 100%;
+        height: 745px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .numbers{
+        bborder-bottom: 20px solid #A0C8EE;
+        bborder-top: 20px solid #A0C8EE;
+        margin-top: 2%;
+        margin-bottom: 4%;
+        margin-left: 3%;
+        margin-right: 3%;
+        padding-left: 4%;
+        padding-right: 4%;
+        padding-bottom: 4%;
+        background-color: #1F0B28;
+        color: white;
+
+    }
+
+    .mural{
+        width: 91.5%;
+        padding-left: 10%;
+    }
+
+    #header{
+        height: 288px;
+    }
+
+    .title{
+        width: 48%;
+        padding: 2%;
+        background-color: #1F0B28;
+        color: #A0C8EE;
+    }
+
+    .title:hover{
+        color: #1F0B28;
+        background-color: #A0C8EE;
+    }
+
+    .back{
+
+        width: 100%;
+        padding: 1%;
+        color: #A0C8EE;
+        font-size: 16pt;
+        text-align: right;
+        font-family: 'GlacialIndifferenceRegular';
+    }
+
+    .back:hover {
+        color: #E4F0C0;
+    }
+
+    /* padding-bottom and top for image */
+    .mfp-no-margins img.mfp-img {
+        padding: 0;
+    }
+    /* position of shadow behind the image */
+    .mfp-no-margins .mfp-figure:after {
+        top: 0;
+        bottom: 0;
+    }
+    /* padding for main container */
+    .mfp-no-margins .mfp-container {
+        padding: 0;
+    }
+
+
+     @media only screen and (max-width: 1439px) {
+        #me{
+            position: static;
+        }
+
+        #about{
+            margin-top: 0px;
+        }
+
+        #header{
+            height: 0%;
+        }
+
+
+    }
+
+    @media only screen and (max-width: 413px) {
+        #resume{
+            width: 40%;
+        }
+    }
+
+        @media only screen and (max-width: 767px) {
+        .mural{
+            margin-top: 40px;
+        }
+    }
+
+
+</style>
+
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="jquery.galereya.min.js"></script>
+        <script src="jquery-stars.js"></script>-->
+<script>
+
+$(document).ready(function(){
+
+    var gallery = $('#gal1').galereya({noCategoryName: 'All',});
+
+
+    $('#header').jstars({
+	image_path: 'images'  ,
+    });
+
+    $('#about').jstars({
+	image_path: 'images'  ,
+    });
+
+    $('#portfolio').jstars({
+	image_path: 'images'  ,
+    });
+
+    $('.container').jstars({
+	image_path: 'images'  ,
+    });
+
+    $('#yellowbar').jstars({
+	image_path: 'images'  ,
+    });
+
+    $('#footer').jstars({
+	image_path: 'images'  ,
+    });
+
+    $('#first').jstars({
+	image_path: 'images'  ,
+    });
+
+    $('#second').jstars({
+	image_path: 'images'  ,
+    });
+});
+
+</script>
+
+<body style="background-color: #5E4860;">
+
+        <div id="square">
+        <div class="square" id="1"></div>
+        <div class="square" id="2"></div>
+        <div class="square" id="3"></div>
+        <div class="square" id="4"></div>
+        </div><!--close square-->
+
+        <div id="text">
+        <div class="text" id="a"></div>
+        </div><!--close text-->
+
+        <div id="header">
+            <img id="me" src="mee.png">
+        </div><!--close header-->
+        <div id="main">
+        <div id="about">
+                <div class="yellowbar">
+        </div><!--close yellow bar-->
+            <div id="bio">
+                <h3 style="display: inline;">I am studying</h3><h1 style="display: inline;"><b> Arts, Technology, and the Business of Innovation</b></h1> </br>
+                <h3 style="display: inline;">at the</h3><h1 style="display: inline;">&nbsp;<b>USC Iovine and Young Academy</b></h1></br></br>
+                <h1 style="display: inline; color: #E4F0C0;"><b>LA</b>&nbsp;|&nbsp;<b>Bay Area</b></h1>
+            </div><!--close bio-->
+                            <div class="yellowbar">
+        </div><!--close yellow bar-->
+        </div><!--close about-->
+
+
+        <div id="portfolio">
+
+                <div id="port"> </br>
+                    <b>Portfolio</b>
+                </div><!--close port-->
+ <div id="first" class="numbers">
+        <br>
+        <div class="back">
+                     <b>Back to Portfolio</b>
+        </div>
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                    <a class="image-popup-vertical-fit" href="stitch.png" title="3D Modeled with Maya, laser-cut, and then constructed out cardboard, paper mache, and a wooden internal structure with my classmate; inspired by movie Lilo and Stitch (approx. 4 ft high)">
+                    <div style="text-align: center;"><img src="stitch_new.png" width="375" height="375"></div></a>
+                <h3>
+                    Giant Stitch PiggyBank
+                </h3>
+                <p>3D model created using Maya. Structure constructed with classmate, leveraging laser cut cardboard/paper mache, and
+                supported by an internal wood structure, approx. 4 ft high <br>
+                <em>Inspired by the Disney movie Lilo & Stitch</em></p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <div style="text-align: center;">
+                        <iframe src="https://player.vimeo.com/video/162905644" width="375" height="375"
+                                frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                <h3>
+                    USC Undergraduate Symposium for Creative Work, 2nd Place
+                </h3>
+                <p>
+                Using laser cut acrylic prisms, film, iPads and dancers, my teammate (Jamie) and I created an installation of holograms
+                that positively enhanced the intersection of dance with digital media</p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <a class="image-popup-vertical-fit" href="toilet.jpg" title="3D modeled and printed using Autodesk Maya">
+                    <div style="text-align: center;"><img src="toilet.jpg" width="375" height="375"></div></a>
+                <h3>
+                    Plant Pot
+                </h3>
+                <p>3D modeled and printed using Autodesk Maya</p>
+            </div>
+        </div>
+        <!-- /.row -->
+        <br>
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                <a class="image-popup-vertical-fit" href="toaster_new.jpg" title="3D modeled a futuristic product in Autodesk Maya">
+                    <div style="text-align: center;"><img src="toaster_new.jpg" width="375" height="375"></div></a>
+                <h3>
+                    Toaster Product Design
+                </h3>
+                <p>3D modeled a futuristic toaster in Autodesk Maya</p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <a class="image-popup-vertical-fit" href="mushroom.jpg" title="Created by the 3Doodler, a 3D Printing Pen">
+                   <div style="text-align: center;"><img style="margin: 0 auto;" src="mushroom_new.jpg" width="375" height="375"></div></a>
+                <h3>
+                    Mushroom Forest
+                </h3>
+                <p>Created by the 3Doodler, a 3D Printing Pen</p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a class="image-popup-vertical-fit" href="ab.jpg" title="Made during my transition to a new high school">
+                    <div style="text-align: center;"><img src="ab_new.jpg" width="375" height="375"></div></a>
+                <h3>
+                    Watercolor
+                </h3>
+                <p>Portrayal of my Asian American amalgamation</p>
+            </div>
+        </div>
+        <br>
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                <a class="image-popup-vertical-fit" href="uf.jpg" title="Watercolor">
+                    <div style="text-align: center;"><img src="uf_new.jpg" width="375" height="375"></div></a>
+                <h3>
+                    Watercolor
+                </h3>
+                <p>Experimental artwork using gold foil; inspired by Gustav Klimt</p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a class="image-popup-vertical-fit" href="mural.jpg" title="Depicts the intersection of art, technology, and business made with my cohort (9x27 ft)">
+                    <div style="text-align: center;"><img src="mural_new.jpg" width="375" height="375"></div></a>
+                <h3>
+                    Whiteboard Dry Erase Mural
+                </h3>
+                <p>Designed with my cohort, this mural depicts the intersection of art, technology, and business (9 x 27 ft)</p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a class="image-popup-vertical-fit" href="academy.jpg" title="Depicts the 22 members of my Iovine Young Academy family">
+                    <div style="text-align: center;"><img src="academy_new.jpg" width="375" height="375"></div></a>
+                <h3>
+                    Digital Illustration
+                </h3>
+                <p>Illustrated the members of my Iovine Young Academy family using Abode Illustrator</p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div> <!-- /.container -->
+</div><!--close first-->
+
+<div id="third" class="numbers">
+
+        <div class="back">
+                     <b>Back to Portfolio</b>
+        </div>
+
+        <h2>Art For Recovery</h2>
+        <hr>
+        <div class="row">
+
+        <div class="col-sm-4">
+            <a class="image-popup-vertical-fit" href="a4r1.jpg" title="Working with patiend at My Friends Pediatric Clinic">
+                    <div style="text-align: center; padding: 3%;"><img src="a4r1.jpg" style="width: 100%;"></div></a>
+        </div>
+        <div class="col-sm-4">
+             <a class="image-popup-vertical-fit" href="a4r2.jpg" title="Children at My Friends Pediatric Clinic working on an art project">
+                    <div style="text-align: center; padding: 3%;"><img src="a4r2.jpg" style="width: 100%;"></div></a>
+        </div>
+
+        <div style="padding-left: 3%; padding-right: 3%; padding-bottom: 3%;">
+            <h3>Tapping into my art skills, I approached local Bay Area hospitals with a proposal (Power of Art in Pain Management) that
+            leveraged the benefits of art as a pain intervention technique. My proposal included models of age-appropriate, easy to
+            teach art projects and a service model to help pediatric patients.<br><br><br>With a vision to provide this service further,
+            I decided to outreach and enable a similar art program in homeless shelters. The marketplace I created on my website connected
+            hospitals and shelters with volunteers while garnering funds and art projects. My project resulted in reaching 9 Bay Area
+            hospitals and homeless shelters to lead art & craft activities for resident children with a goal of channeling creative energies,
+            and fostering the mental well-being of over 170 children (see <a href="http://art4recovery.com/" target="_new">art4recovery.com</a>).</h3>
+        </div>
+        </div><!--close first row-->
+
+        <div class="row">
+        <div class="col-sm-8">
+            <a class="image-popup-vertical-fit" href="a4r3.jpg" title="Model of the Art For Recovery program">
+                    <div style="text-align: right; "><img src="a4r3.jpg" style="width: 100%;"></div></a>
+        </div>
+                <div class="col-sm-4">
+            <a class="image-popup-vertical-fit" href="a4r4.png" title="Mural I painted at the Stand Up For Kids Shelter in San Jose">
+                    <div style="text-align: left;"><img class="mural" src="a4r4.png"></div></a>
+        </div>
+        </div><!--close second row-->
+
+</div><!--close third-->
+
+<div id="fourth" class="numbers">
+
+        <div class="back">
+         <b>Back to Portfolio</b>
+        </div>
+        <h2>Branch Out</h2>
+        <hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <a class="image-popup-vertical-fit" href="br1.jpg" title="">
+                    <div style="text-align: center; "><img src="br1.jpg" style="width: 88%;"></div></a>
+            </div>
+
+            <div class="col-sm-6">
+                <div>
+                    <h3><p>In my Disruptive Innovation class we were given an entrepreneurial challenge to create the most profitable venture.
+                    As a team of four, we chose to launch a company of laser-cut, wooden greeting cards, pushing out a
+                    marketing campaign and website overnight, while positioning a unique brand identity. Winning first place in this e-challenge,
+                    we were able to secure $620 in the required two-week turnaround.</p></h3>
+                    <br>
+                    <br>
+                </div>
+
+                <div style="text-align: center;">
+                    <a class="image-popup-vertical-fit" href="br2.jpg" title="">
+                    <div><img src="br2.jpg" style= "width: 26.5%; float: left; margin-right: 2%;"></div></a>
+
+                    <a class="image-popup-vertical-fit" href="br3.jpg" title="">
+                    <div><img src="br3.jpg" style= "width: 44.2%; float: left;"></div></a>
+
+                    <a class="image-popup-vertical-fit" href="br4.jpg" title="">
+                    <div><img src="br4.jpg" style= "width: 24.9%; float: left; margin-left: 2%;"></div></a>
+
+                </div>
+            </div>
+        </div><!--close first row-->
+        <br><br>
+        <h2>Rumble</h2>
+        <hr>
+
+        <div class="row">
+                <div class="col-sm-6" style = "padding: 3%;">
+                    <h3><p>As a team of four, we took up the challenge of designing a product that potentially solves an issue in the Agriculture industry.
+                    We came up with a product that directly addresses the soil erosion issue faced by farmers everyday in the inadequate process of tilling.
+                    I took the initiative of building a prototype of this product, <em>Rumble</em>, using Maya, the 3D modeling software. This product is a
+                    spherical device that farmers can insert up to 5 feet deep into the topsoil depending on the crop's variable root depths. Rumble uses the ports
+                    located across its surface to send puffs of pressurized air through the plots and shakes the topsoil enough to
+                    enable water absorption, thereby also returning minerals to the soil. The project encompassed positioning Rumble's brand identity as well as its
+                    value proposition.</p></h3>
+                </div>
+                <div class="col-sm-6">
+                    <a class="image-popup-vertical-fit" href="3d.png" title="Rumble Prototype made in Maya">
+                    <div style= "text-align: center;"><img style="text-align: center; width: 100%; float: center; margin-left: 1%;" src="3d.png"></div></a>
+                </div>
+        </div>
+        <div class="row">
+                    <a class="image-popup-vertical-fit" href="1.jpg" title="">
+                    <div><img src="1.jpg" style= "width: 19%; float: left; margin-right: 1%;"></div></a>
+
+                    <a class="image-popup-vertical-fit" href="2.jpg" title="">
+                    <div><img src="2.jpg" style= "width: 19%; float: left; margin-right: 1%;"></div></a>
+
+                    <a class="image-popup-vertical-fit" href="3.jpg" title="">
+                    <div><img src="3.jpg" style= "width: 19%; float: left; margin-right: 1%;"></div></a>
+
+                    <a class="image-popup-vertical-fit" href="4.jpg" title="">
+                    <div><img src="4.jpg" style= "width: 19%; float: left; margin-right: 1%;"></div></a>
+
+                    <a class="image-popup-vertical-fit" href="5.jpg" title="">
+                    <div><img src="5.jpg" style= "width: 19%; float: left;"></div></a>
+                </div>
+
+        </div><!--close second row-->
+
+
+</div><!--close fourth-->
+
+<div class="container">
+
+        <hr>
+
+        <!-- Projects Row #1F0B28-->
+        <div class="row">
+            <div class="col-md-6 portfolio-item">
+                    <img style="border: 7px solid #1F0B28;" class="img-responsive" src="stitch_c.png" alt="">
+                <h3 class="title" id="creative">
+                     Creative
+                </h3>
+            </div>
+            <div class="col-md-6 portfolio-item">
+                    <img style="border: 7px solid #1F0B28;"  class="img-responsive" src="branch_c.jpg" alt="">
+                  <h3 class="title" id="projects">
+
+                      Entrepreneurial
+
+                </h3>
+            </div>
+        </div>
+        <!-- /.row -->
+        <hr>
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-6 portfolio-item">
+
+                    <img style="border: 7px solid #1F0B28;" class="img-responsive" src="shell_c.png" alt="">
+
+                <h3 class="title" id="concentration">
+                    Art
+                </h3>
+            </div>
+            <div class="col-md-6 portfolio-item">
+                    <img style="border: 7px solid #1F0B28;" class="img-responsive" src="a4r_c.jpg" alt="">
+                <h3 class="title" id="leadership">
+                    Leadership
+                </h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+
+    </div>
+    <!-- /.container -->
+
+     <div id="second" class="numbers">
+        <div class="back">
+                     <b>Back to Portfolio</b>
+        </div>
+        <h3>A concentration of acrylic pieces that exploit the truth behind marketing gimmicks of leading global brands...</h3>
+        <hr>
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                <a class="image-popup-vertical-fit" href="shell.png" title="Shell Fuels">
+                    <div style="text-align: center;"><img src="shell.png" style= "width: 95%;"></div></a>
+                <h4 style="text-align: center;">
+                    Shell Fuels
+                </h4>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <a class="image-popup-vertical-fit" href="starbucks.jpg" title="Starbucks">
+                    <div style="text-align: center;"><img src="starbucks.jpg" style= "width: 99%;"></div></a>
+                <h4 style="text-align: center;">
+                    Starbucks
+                </h4>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <a class="image-popup-vertical-fit" href="innout.png" title="In'N'Out Fast Food">
+                    <div style="text-align: center;"><img src="innout.png" style= "width: 101%;"></div></a>
+                <h4 style="text-align: center;">
+                    In'N'Out Fast Food
+                </h4>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                    <a class="image-popup-vertical-fit" href="chrome.jpg" title="Internet Browsers">
+                    <div style="text-align: center;"><img src="chrome.jpg" style= "width: 99%;"></div></a>
+                <h4 style="text-align: center;">
+                    Internet Browsers
+                </h3>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <a class="image-popup-vertical-fit" href="bell.png" title="Taco Bell">
+                    <div style="text-align: center;"><img src="bell.png" style= "width: 97%;"></div></a>
+                <h4 style="text-align: center;">
+                    Taco Bell
+                </h4>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a class="image-popup-vertical-fit" href="nike.jpg" title="Nike">
+                    <div style="text-align: center;"><img src="nike.jpg" style= "width: 95%;"></div></a>
+                <h4 style="text-align: center;">
+                    Nike
+                </h4>
+            </div>
+        </div>
+
+                <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                    <a class="image-popup-vertical-fit" href="mar.jpg" title="Marlboro Cigarettes">
+                    <div style="text-align: center;"><img src="mar.jpg" style= "width: 97.5%;"></div></a>
+                <h4 style="text-align: center;">
+                    Marlboro Cigarettes
+                </h4>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <a class="image-popup-vertical-fit" href="apple.jpg" title="Apple">
+                    <div style="text-align: center;"><img src="apple.jpg" style= "width: 97%;"></div></a>
+                <h4 style="text-align: center;">
+                    Apple
+                </h4>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <a class="image-popup-vertical-fit" href="sat.jpg" title="CollegeBoard">
+                    <div style="text-align: center;"><img src="sat.jpg" style= "width: 99%;"></div></a>
+                <h4 style="text-align: center;">
+                   College Board
+                </h4>
+            </div>
+        </div>
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                    <a class="image-popup-vertical-fit" href="nba.png" title="National Basketball Association">
+                    <div style="text-align: center;"><img src="nba.png" style= "width: 80%;"></div></a>
+                <h4 style="text-align: center;">
+                   National Basketball Association
+                </h4>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <a class="image-popup-vertical-fit" href="stanford.jpg" title="Stanford University">
+                    <div style="text-align: center;"><img src="stanford.jpg" style= "width: 79%;"></div></a>
+                <h4 style="text-align: center;">
+                  Stanford University
+                </h4>
+            </div>
+            <div class="col-md-4 portfolio-item">
+
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+    </div> <!-- /.container -->
+</div><!--close second-->
+
+
+
+</div><!--close portfolio-->
+
+
+        <div class="yellowbar" id="yellowbar">
+        </div><!--close yellow bar-->
+
+        <div id="footer"> </br></br></br>
+            </br></br>
+            <center><a href="AvniBarmanResume.pdf" target="_blank" style="text-decoration: none;"><div id="resume">
+            <h2>resume</h2></div></a>
+            </br></br>
+            <div id="line"></div>
+            </br></br>
+            <div class="row" style="width: 40%;">
+                    <div class="col-sm-6" style="text-align: center;"><a target="new" href="https://www.linkedin.com/in/avnibarman"><img class="icons" src="linkedin.png"></a></div>
+                    <div class="col-sm-6" style="text-align: center;"><a href="mailto:avni.barman@gmail.com"><img class="icons" src="email.png"></a></div>
+            </div> </br></br></br>
+
+                 <h5>&copy; 2016 Avni Barman</h5> </br>
+        </div><!--close footer-->
+
+    </div><!--close main-->
+
+
+</body>
+</html>
